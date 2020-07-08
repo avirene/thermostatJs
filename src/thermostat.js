@@ -5,7 +5,7 @@ class Thermostat {
     this.MINIMUM_TEMPERATURE = 10;
     this.MAX_LIMIT_PSM_ON = 25;
     this.MAX_LIMIT_PSM_OFF = 32;
-    this.DEFAUL_TEMPERATURE = 20;
+    this.DEFAULT_TEMPERATURE = 20;
     this.temperature = this.DEFAULT_TEMPERATURE;
     this.powerSavingMode = true;
   }
@@ -38,11 +38,11 @@ class Thermostat {
   }
 
   turnPowerSavingModeOff() {
-    return this.powerSavingMode = false;
+    this.powerSavingMode = false;
   }
 
   turnPowerSavingModeOn() {
-    return this.powerSavingMode = true;
+    this.powerSavingMode = true;
   }
 
   isMaximumTemperature() {
@@ -53,6 +53,18 @@ class Thermostat {
   }
 
   resetTemperature() {
-    this.temperature = this.DEFAUL_TEMPERATURE;
+    this.temperature = this.DEFAULT_TEMPERATURE;
+  }
+
+  energyUsage() {
+    if (this.temperature < 18) {
+      return "low-usage";
+    }
+    if (this.temperature >= 18 && this. temperature <= 25) {
+      return "medium-usage";
+    }
+    if (this.temperature > 25) {
+      return "high-usage";
+    }
   }
 }
