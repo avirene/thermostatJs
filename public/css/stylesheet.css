@@ -9,3 +9,8 @@
 .high-usage {
   color: red;
 }
+
+body {
+  background-color: aqua;
+  color: darkblue;
+}
