@@ -14,3 +14,14 @@ body {
   background-color: aqua;
   color: darkblue;
 }
+
+button {
+  background-color: rgb(25, 185, 151);
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
